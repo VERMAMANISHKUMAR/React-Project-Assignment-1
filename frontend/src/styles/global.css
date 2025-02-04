@@ -1,0 +1,57 @@
+/* Global Styles */
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          padding: 20px;
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+        
+        /* Responsive container */
+        @media (max-width: 768px) {
+          .container {
+            padding: 0 10px;
+          }
+        }
+        /*------------------------------------  */
+        /* Tablets */
+@media (max-width: 1024px) {
+          .container {
+            max-width: 90%;
+          }
+        }
+        
+        /* Large Mobile Devices */
+        @media (max-width: 768px) {
+          body {
+            padding: 10px;
+          }
+        }
+        
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+          .form-container,
+          .editor-container {
+            padding: 10px;
+          }
+        
+          .counter-value {
+            font-size: 28px;
+          }
+        
+          .form-input,
+          .submit-button {
+            font-size: 14px;
+          }
+        }
+        

@@ -1,0 +1,36 @@
+.editor-container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .editor-wrapper {
+          background: white;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ql-toolbar {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        .ql-container {
+          min-height: 200px;
+          font-size: 16px;
+        }
+        
+        /* Responsive editor */
+        @media (max-width: 768px) {
+          .editor-container {
+            padding: 10px;
+          }
+        
+          .ql-container {
+            min-height: 150px;
+            font-size: 14px;
+          }
+        }
+        
