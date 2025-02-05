@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './UserForm.css';
+// import { Link } from 'react-router-dom';
 
 const UserForm = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +95,8 @@ const UserForm = () => {
         </div>
 
         <button type="submit" className="submit-button">
-          Save User Data
+        {/* <Link to='/editor'> </Link> */}
+        Save User Data
         </button>
       </form>
       <ToastContainer />

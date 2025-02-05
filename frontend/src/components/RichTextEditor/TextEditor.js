@@ -10,13 +10,14 @@ const TextEditor = () => {
   useEffect(() => {
     const savedUserData = localStorage.getItem('userData');
     if (savedUserData) {
-      setUserData(JSON.parse(savedUserData));
+      const parsedData = JSON.parse(savedUserData);
+      setUserData(parsedData);
       setContent(`
         <h2>User Profile</h2>
-        <p><strong>Name:</strong> ${JSON.parse(savedUserData).name}</p>
-        <p><strong>Email:</strong> ${JSON.parse(savedUserData).email}</p>
-        <p><strong>Phone:</strong> ${JSON.parse(savedUserData).phone}</p>
-        <p><strong>Address:</strong> ${JSON.parse(savedUserData).address}</p>
+        <p><strong>Name:</strong> ${parsedData.name}</p>
+        <p><strong>Email:</strong> ${parsedData.email}</p>
+        <p><strong>Phone:</strong> ${parsedData.phone}</p>
+        <p><strong>Address:</strong> ${parsedData.address}</p>
       `);
     }
   }, []);
@@ -25,20 +26,21 @@ const TextEditor = () => {
     toolbar: [
       [{ 'header': [1, 2, false] }],
       ['bold', 'italic', 'underline', 'strike'],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      ['clean']
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+      ['clean'],
     ],
   };
 
   const formats = [
     'header',
     'bold', 'italic', 'underline', 'strike',
-    'list', 'bullet'
+    'list', 'bullet',
   ];
 
   return (
     <div className="editor-container">
-      <h2>Rich Text Editor</h2>
+      <h2 className="editor-title">Rich Text Editor</h2>
+      {userData && <p className="user-info">Welcome, {userData.name}!</p>}
       <div className="editor-wrapper">
         <ReactQuill
           theme="snow"

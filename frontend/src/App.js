@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import Counter from './components/Counter/Counter';
 import UserForm from './components/UserForm/UserForm';
 import TextEditor from './components/RichTextEditor/TextEditor';
+import LoginSignup from './components/LoginSignup/LoginSignup';
 import './styles/global.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Counter />} />
             <Route path="/form" element={<UserForm />} />
             <Route path="/editor" element={<TextEditor />} />
+            <Route path="/login-signup" element={<LoginSignup />} />
           </Routes>
         </div>
       </div>
@@ -24,3 +26,4 @@ function App() {
 }
 
 export default App;
+
